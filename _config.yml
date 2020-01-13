@@ -1,8 +1,8 @@
-title: Your Title
+title: 동수의 포트폴리오
 description: > # this means to ignore newlines until "baseurl:"
   Your description
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "Your-Link.github.io" # the base hostname & protocol for your site
+url: "Dongsu0401.github.io" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
