@@ -20,13 +20,6 @@ footer {
             <div class="col-md-4">
                 <span class="copyright">© {{ 'now' | date: "%Y" }} <a href="">Portfolio</a> by <a href="">Lee Dong su</a>,<br>All Rights Reserved.</span>
             </div>
-            <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                    {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a></li>
-                    {% endfor %}
-                </ul>
-            </div>
         </div>
     </div>
 </footer>
