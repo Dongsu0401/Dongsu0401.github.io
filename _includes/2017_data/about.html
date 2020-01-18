@@ -1,32 +1,42 @@
-<!-- About Section -->
 <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted"></h3>
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">We will do our best to answer your request as soon as possible. You may send us your request via <a href="https://www.facebook.com/malaysianstudentstechnologyconference">Facebook Message</a></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="timeline">
-                        {% for about_data in site.data.twenty_17.home_about_data %}
-                            <li class="{{ about_data.inverted }}">
-                                <div class="timeline-image">
-                                    <img class="img-circle img-responsive" src="../css/2016_style/img/{{ about_data.img }}" alt="">
+                    <form name="sentMessage" id="contactForm" action="https://formspree.io/hello.world@gmail.com" method="POST" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name."WW>
+                                    <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4>{{ about_data.name }}</h4>
-                                    </div>
-                                    <div class="timeline-heading">
-                                        <p class="text-muted">{{ about_data.info }}</p>
-                                    </div>
-                                    <a href="{{ about_data.link }}" class="page-scroll btn btn-sm">Learn More</a>
+                                <div class="control-group form-group">
+                                    <input type="email" class="form-control" name="_replyto" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
                                 </div>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                                <div class="control-group form-group">
+                                    <input type="tel" class="form-control" name="phone" placeholder="Your Phone" id="phone" required data-validation-required-message="Please enter your phone number (optional).">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <textarea class="form-control" name="message" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" value="Send" class="btn btn-xl">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
